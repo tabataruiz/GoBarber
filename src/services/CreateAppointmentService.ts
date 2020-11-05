@@ -1,4 +1,3 @@
-// serviço é responsável sempre por uma única coisa (criar, editar, deletar)
 import { startOfHour } from 'date-fns';
 import { getCustomRepository } from 'typeorm';
 
@@ -6,8 +5,8 @@ import Appointment from '../models/Appointment';
 import AppointmentsRepository from '../repositories/AppointmentsRepository';
 
 interface Request {
-  provider_id: string;
   date: Date;
+  provider_id: string;
 }
 
 class CreateAppointmentService {
